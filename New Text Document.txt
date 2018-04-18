@@ -1,0 +1,62 @@
+appache server used xampp software
+vuejs framework only
+node js software =local server generate
+
+c>xampp>htdocs>mouse right button click(ctrl+shift) open common window or open powershel window
+
+At first composer create-project laravel/laravel VueCrud
+
+VueCrud->mouse right button click(ctrl+shift)
+
+open common window or open powershel window
+
+
+
+
+
+1.npm install
+2.npm install vue-resource --save
+3.npm install laravel-elixir-vue-2 --save-dev
+4.npm run dev
+
+
+5.php artisan serve
+
+->php artisan make:auth
+
+
+
+
+6.php artisan make:controller StudentController --resource
+7.php artisan make:model Student -m
+8.when create students table and its fields with dataType then write
+ ->php artisan migrate
+9.npm run watch
+
+
+
+app.js
+=======
+
+1.window.Vue = require('vue');
+2.var Vue=require('vue');
+3.Vue.use(require('vue-resource'));
+4.Vue.http.headers.common['X-CSRF-TOKEN']=$('meta[name="csrf-token"]').attr('content');
+
+
+
+
+
+import student from './components/Students.vue';
+const app = new Vue({
+    el: '#app',
+    components:{student}
+});
+
+
+js->components->Students.vue
+ExampleComponent copy into Student.vue paste
+
+
+ <v-for="student in students>
+    {{ student.email}}
